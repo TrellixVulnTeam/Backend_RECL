@@ -1,0 +1,20 @@
+[                                                                                                                                                     
+    {
+        "title": "prod1",
+        "price": 100.05,
+        "thumbnail": "https://ibb.co/TPWQRS7",
+        "id": 1
+    },
+      {
+        "title": "prod2",
+        "price": 200.10,
+        "thumbnail": "https://ibb.co/0GW1Y5N",
+        "id": 2
+    },
+    {
+        "title": "prod3",
+        "price": 300.15,
+        "thumbnail": "https://ibb.co/28mrbRb",
+        "id": 3
+    }
+]
