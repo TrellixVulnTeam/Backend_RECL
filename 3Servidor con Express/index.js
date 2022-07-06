@@ -9,7 +9,7 @@ const server = app.listen(PORT, () => {
     console.log('Servidor corriendo en el puerto: ' + PORT)
 })
 
-app.get('/products', async (req,res) =>{
+app.get('/productos', async (req,res) =>{
     container.getAll().then(resp => 
         res.send(resp)
     )

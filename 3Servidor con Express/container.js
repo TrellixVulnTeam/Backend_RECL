@@ -1,5 +1,4 @@
 const fs = require('fs');
-
 const checkInArray = (id, array) => { return (array.filter(e => e.id === id).length > 0) ? true : false };
 
 class Container {
@@ -93,4 +92,4 @@ class Container {
 }
 
 
-export { Container };
+module.exports = Container;
