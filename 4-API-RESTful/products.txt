@@ -1,0 +1,47 @@
+[                                                                                                                                                     
+    {
+        "title": "prod1",
+        "price": 100.05,
+        "id": 1,
+        "thumbnail": "https://ibb.co/TPWQRS7"
+    },
+      {
+        "title": "prod2",
+        "price": 200.10,
+        "id": 2,
+        "thumbnail": "https://ibb.co/NLKHhk6"
+    },
+    {
+        "title": "prod3",
+        "price": 300.15,
+        "id": 3,
+        "thumbnail": "https://ibb.co/ckKJDn7"
+    },
+
+        {
+        "title": "prod4",
+        "price": 400.15,
+        "id": 4,
+        "thumbnail": "https://ibb.co/GW3zsy4"
+    },
+
+        {
+        "title": "prod5",
+        "price": 500.15,
+        "id": 5,
+        "thumbnail": "https://ibb.co/0GW1Y5N"
+        },
+    {
+        "title": "prod6",
+        "price": 600.15,
+        "id": 6,
+        "thumbnail": "https://ibb.co/NCXdCrR"
+    },
+
+        {
+        "title": "prod7",
+        "price": 700.15,
+        "id": 7
+        "thumbnail": "https://ibb.co/TPWQRS7"
+    }
+]

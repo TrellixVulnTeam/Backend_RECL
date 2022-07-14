@@ -1,0 +1,51 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.centrar {
+    display: grid;
+    place-content: center;
+}
+
+.container {
+    display: grid;
+    place-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(241, 227, 180, 0.903);
+}
+
+h1 {
+
+    font-weight: bold;
+    color: rgb(7, 14, 72);
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+form{
+    padding: 50px;
+    background-color: #e5ffe7;
+    border-radius: 8px;
+}
+
+form p{
+    margin: 5px;
+}
+form input{
+    width: 100%;
+}
+
+button{
+    padding: 8px 15px;
+    align-items: center;
+    margin-left: 35%;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(157, 255, 0, 0.413);
+}
