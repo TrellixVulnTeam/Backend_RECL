@@ -1,57 +1,76 @@
+const express = require('express');
+const { Router } = express;
 
-fs = require('fs');
+const router = Router();
 
-class Container {
-
-    constructor(file) {
-        this.file = file;
-        this.format = 'utf-8';
-    }
-
-
-    read() {
-        let container_file = fs.readFileSync(this.file, this.format);
-        container_file = JSON.parse(container_file);
-        return container_file;
-    }
-
-    save(products) {
+const products = [
+  { title: 'Prpduct', price: '800', thumbnail: 'https://ibb.co/GW3zsy4', id: 1 },
+];
 
 
-        let container_file = fs.readFileSync(this.file, this.format);
-        let array_product = "";
+class Products {
+    constructor(products) {
+      this.newId = products.length;
+      this.products = products;
+  
+      router.get('/', this.getAllProducts);
+      router.get('/:id', this.getProduct);
+      router.post('/', this.setProduct);
+      router.put('/:id', this.updateProduct);
+      router.delete('/:id', this.deleteProduct);
+    };
+  
+    getAllProducts = (req, res) => {
+        console.log('Get all products received OK');
+        res.status(201).send(this.products);
+      };
 
-        if (container_file != "") {
-            array_product = JSON.parse(container_file);
+      getProduct = (req, res) => {
+        console.log('Get product by Id received OK');
+        const { id } = req.params;
+        if (id >= 1 && id <= this.products.length) {
+          res.status(201).send(this.products[id - 1]);
         } else {
-            array_product = [];
+          res.status(400).send({ error: 'Not found' });
         }
-        array_product.push(products);
-        let array_product_JSON = JSON.stringify(array_product);
-        fs.writeFile(this.file, array_product_JSON, (error, container) => {
-            if (error) {
-                console.error(error);
-            } else {
-                console.log('Se guardó información en el archivo');
-            }
-        });
-
-    }
-
-    getProduct(id) {
-        let container_file = fs.readFileSync(this.file, this.format);
-        let array_product = "";
-
-        if (container_file != "") {
-            array_product = JSON.parse(container_file);
+      };
+      setProduct = (req, res) => {
+        console.log('Post product received OK');
+        const received = req.body;
+        this.newId++;
+    
+        const saveProduct = { ...received, id: this.newId };
+        this.products.push(saveProduct);
+        res.status(201).send(saveProduct);
+      };
+    
+      updateProduct = (req, res) => {
+        console.log('Put product received OK');
+        const { id } = req.params;
+        const received = req.body;
+    
+        if (id >= 1 && id <= this.products.length) {
+          const saveProduct = { ...received, id: parseInt(id) };
+          products.splice(id - 1, 1, saveProduct);
+          res.status(201).send(saveProduct);
         } else {
-            array_product = [];
+          res.status(400).send({ error: 'not found' });
         }
-        const find = array_product.find(element => element.id = id);
-        return JSON.stringify(find);
+      };
+    
+      deleteProduct = (req, res) => {
+        console.log('Delete product received OK');
+        const { id } = req.params;
+    
+        if (id >= 1 && id <= this.products.length) {
+          products.splice(id - 1, 1, { error: 'not available' });
+          res.status(201).send({ message: 'Deleted product OK' });
+        } else {
+          res.status(400).send({ error: 'not found' });
+        }
+      };
     }
-
-}
-
-
-module.exports = Container;
+    
+    new Products(products);
+    
+    module.exports = router;
