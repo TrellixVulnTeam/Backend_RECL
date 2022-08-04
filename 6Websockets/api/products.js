@@ -1,4 +1,4 @@
-class ApiProducts {
+class Products {
     constructor() {
         this.array = []
         this.id = 0
@@ -41,4 +41,4 @@ class ApiProducts {
         }
     }
 }
-module.exports = ApiProducts
+module.exports = Products

@@ -13,12 +13,12 @@ addProduct.addEventListener('submit', e => {
 })
 
 socket.on('products', products => {
-    vistaTabla(products).then(html => {
+    tableView(products).then(html => {
         document.getElementById('productsList').innerHTML = html
     })
 })
 
-function vistaTabla(products) {
+function tableView(products) {
     return fetch('productsList.hbs')
         .then(res => res.text())
         .then(resp => {
@@ -31,7 +31,7 @@ function vistaTabla(products) {
         })
 }
 
-// MENSAJES
+
 const inputUser = document.getElementById('inputUser')
 const inputMessage = document.getElementById('inputMessage')
 const messageButton = document.getElementById('messageButton')
