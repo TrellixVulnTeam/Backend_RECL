@@ -30,7 +30,7 @@ function updateProduct(e,id){
     }
     console.log(upProduct)
 
-    fetch('http://localhost:8080/api/products/'+id, {
+    fetch('http://localhost:8080/api/productos/'+id, {
         method: 'PUT',
         headers: {
             "Content-Type": "application/json",
@@ -44,7 +44,7 @@ function updateProduct(e,id){
 }
 
 function deleteProd(id){
-    fetch('http://localhost:8080/api/products/'+id, {
+    fetch('http://localhost:8080/api/productos/'+id, {
         method: 'DELETE',
         headers: {
             "Content-Type": "application/json",
@@ -69,7 +69,7 @@ function addCart(id){
         id: id
     }
 
-    fetch('http://localhost:8080/api/cart/'+id+'/products', {
+    fetch('http://localhost:8080/api/carrito/'+id+'/productos', {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",

@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path'
 
-const dataCartPath = path.resolve('../data/cart.txt')
+const dataCartPath = path.resolve('./data/cart.txt')
 
 class Cart{
     constructor(){
@@ -83,7 +83,7 @@ class Cart{
                     return data
                     break;
                 }else{
-                    let err = {message:"product already exists"}
+                    let err = {mensaje:"product already exists"}
                     return err
                 }
                 

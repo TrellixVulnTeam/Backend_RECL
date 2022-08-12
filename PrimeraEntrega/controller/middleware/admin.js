@@ -1,6 +1,6 @@
 function adminMid (req, res, next){
-    req.admin = true;
-    next()
- }
- 
- export default adminMid;
+   req.admin = true;
+   next()
+}
+
+export default adminMid;

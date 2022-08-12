@@ -1,10 +1,10 @@
 import fs from 'fs';
 import path from 'path'
 
-const dataPath = path.resolve('../data/products.txt')
+const dataPath = path.resolve('./data/products.txt')
 
 
-class Products{
+class Product{
     
     constructor(){
         this.prod = [];
@@ -43,16 +43,16 @@ class Products{
 
     getById(id){
         
-        let finalId = parseInt(id) - 1;
+        let idFinal = parseInt(id) - 1;
         
         let data = JSON.parse(fs.readFileSync(dataPath,'utf-8'));
 
-        if(data[finalId] !== undefined){
-            return data[finalId]
+        if(data[idFinal] !== undefined){
+            return data[idFinal]
         }else if(id === undefined){
             return data
-        }else if(data[finalId] == undefined && id > 0){
-            return {message:"product does not exist"}
+        }else if(data[idFinal] == undefined && id > 0){
+            return {mensaje:"product does not exist"}
         }
         
     }
@@ -64,7 +64,7 @@ class Products{
         let data = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
         console.log(data)
         if(!data[newId]){
-            let error = {"error": "error, does not exist"}
+            let error = {"error": "Does not exist"}
             return error
         }else{
             data[newId] = obj;
@@ -80,7 +80,7 @@ class Products{
         
 
         if(data.length < id){
-            let error = {error: "El elemento no existe"}
+            let error = {error: "Does not exist"}
             return error
         }else{
             data.splice(newId,1)
@@ -91,5 +91,5 @@ class Products{
     }
 }
 
-let products = new Products();
+let products = new Product();
 export default products;

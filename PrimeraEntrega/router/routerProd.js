@@ -15,7 +15,6 @@ const routerProd = Router()
     })
 
 
-/*-------------------------------------------------*/
 
 const storage = multer.diskStorage({
     destination: function(req, file,cb){
@@ -27,7 +26,6 @@ const storage = multer.diskStorage({
 })
 const upload = multer({storage: storage})
 
-/*-------------------------------------------------*/
 
     let test = [];
 
@@ -36,7 +34,7 @@ const upload = multer({storage: storage})
         
         
         if(!file){
-            const error = new Error('Upload a file')
+            const error = new Error('please upload a file')
             error.httpStatuscode = 400
             return next(error)
         }
@@ -58,5 +56,7 @@ const upload = multer({storage: storage})
 
 
 export default routerProd;
+
+
 
 

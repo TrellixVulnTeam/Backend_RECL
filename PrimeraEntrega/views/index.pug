@@ -4,12 +4,12 @@ html(lang="en")
     body
         include  ./partials/nav.pug
         section(class="container-fluid")
-            div( class="row")
-                h1 Products
+            div( class="row mt-3 justify-content-center") 
+                h1(class="row justify-content-center") Welcome!
                 each prod in data
-                    div(class="card col-3" id= prod.id)
+                    div(class="card col-3 mt-5 mb-5" id= prod.id)
                         img(id="thumbnailCart" src="/"+prod.thumbnail)
-                        div(class="card-body")
+                        div(class="card-body ")
                             h5(class="card-title" id="titleCart")= prod.title
                             p(class="card-text" id="priceCart")= prod.price
                             p(class="card-text" id="descriptionCart")= prod.description
@@ -44,9 +44,9 @@ html(lang="en")
                                     label(for="description" class="form-label") Description
                                     textarea(class="form-control form-control-sm" name="description" id="description" cols="30" rows="10")
 
-        
-                                input(type="submit" class="btn btn-primary" value="Enviar")
-                        button(class="btn btn-primary" onclick="updateProd("+prod.id+")") Update
-                        button(class="btn btn-primary" onclick="deleteProd("+prod.id+")") Delete
-                        button(class="btn btn-primary" onclick="addCart("+prod.id+")") Add to cart
+                                
+                                input(type="submit" class="btn btn-primary " value="Submit")
+                        button(class="btn btn-primary w-50 mb-2" onclick="updateProd("+prod.id+")") Update
+                        button(class="btn btn-primary w-50 mb-2" onclick="deleteProd("+prod.id+")") Delete
+                        button(class="btn btn-primary w-50 mb-4" onclick="addCart("+prod.id+")") Add to cart
     script(src="/js/updateProd.js") 

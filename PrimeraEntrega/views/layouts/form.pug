@@ -2,10 +2,10 @@ doctype html
 html(lang="en") 
     include ../partials/head.pug
     body
-        include  ../partials/menu.pug
+        include  ../partials/nav.pug
         div(style="padding: 5%;")
-            h1 Add Product
-            form(class="col-6" action="/api/products/add" enctype="multipart/form-data" method="POST")
+            h1 Add product
+            form(class="col-6" action="/api/productos/agregar" enctype="multipart/form-data" method="POST")
                 div(class="mb-3")
                     label(for="title" class="form-label") Product
                     input(type="text" class="form-control" id="title" name="title")

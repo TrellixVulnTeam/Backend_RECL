@@ -16,15 +16,15 @@ routerCart.delete('/:id', (req, res) => {
     res.send(cart.deleteCart(req.params.id))
 })
 
-routerCart.get('/:id/products', (req, res) => {
+routerCart.get('/:id/productos', (req, res) => {
     res.send(cart.listProducts(req.params.id))
 })
 
-routerCart.post('/:id/products', (req, res) => {
+routerCart.post('/:id/productos', (req, res) => {
     res.send(cart.addProductsCart(req.body, req.params.id))
 })
 
-routerCart.delete('/:id/products/:id_prod', (req, res) =>{
+routerCart.delete('/:id/productos/:id_prod', (req, res) =>{
     res.send(cart.deleteProductsCart(req.params.id, req.params.id_prod))
 })
 
