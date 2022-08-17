@@ -1,0 +1,16 @@
+table(class="table")
+  each prod in products
+
+    thead
+      tr            
+        th(scope="col") Product
+        th(scope="col") Price
+        th(scope="col") Image
+    tbody
+      tr
+        td(class="titleProd")= prod.title
+      tr    
+        td(class="priceProd")= prod.price
+      tr
+        td
+          img(class="thumbnailProd", src= prod.thumbnail )

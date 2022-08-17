@@ -5,10 +5,8 @@ import adminMid from "../controller/middleware/admin.js";
 
 const routerProd = Router()
 
-
     routerProd.get('/:id?', (req, res)=>{
         let data = products.getById(req.params.id);
-
         res.render(
             './index.pug',{data}
         )
@@ -31,7 +29,6 @@ const upload = multer({storage: storage})
 
     routerProd.post('/agregar',upload.single('thumbnail'), adminMid, (req, res,next) =>{
         const file = req.file;
-        
         
         if(!file){
             const error = new Error('please upload a file')

@@ -7,7 +7,7 @@ html(lang="en")
             div( class="row mt-3 justify-content-center") 
                 h1(class="row justify-content-center") Welcome!
                 each prod in data
-                    div(class="card col-3 mt-5 mb-5" id= prod.id)
+                    div(class="card col-3 m-5" id= prod.id)
                         img(id="thumbnailCart" src="/"+prod.thumbnail)
                         div(class="card-body ")
                             h5(class="card-title" id="titleCart")= prod.title
@@ -16,8 +16,8 @@ html(lang="en")
                             span(class="card-text" id="SKUCart")= prod.SKU
                             p(class="card-text" id="stockCart")= prod.stock
                             small(id="timestampCart")= prod.timestamp
-                            br
-                            br
+                            
+                            
                             button(style="display:none;" class="btn btn-primary" id="X"+prod.id onclick="closeUpdate("+prod.id+")") X
                             form( style="display:none;" id="update"+prod.id onsubmit="return updateProduct(this,"+prod.id+")" enctype="multipart/form-data")
                                 div(class="mb-3")
