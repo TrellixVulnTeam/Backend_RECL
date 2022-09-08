@@ -1,0 +1,22 @@
+[
+  {
+    "id": 2,
+    "timestamp": "31/7/2022 18:54:29",
+    "nombre": "twister 110",
+        "precio": "12000",
+        "foto": "https://ibb.co/KhqN8hT",
+        "descripcion": "Negro con Rojo",
+        "codigo": "TW-110-2355",
+        "stock": "35"
+  },
+  {
+    "id": 3,
+    "timestamp": "31/7/2022 23:01:20",
+    "nombre": "Roller-Derby-AERIO-Q-60",
+    "precio": "8500",
+    "foto": "https://ibb.co/b7Tm6ww",
+    "descripcion": "Negro con Amarillo",
+    "codigo": "RLLDRBQ60",
+    "stock": "41"
+  }
+]

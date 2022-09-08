@@ -1,0 +1,66 @@
+/* --- INICIO DEL NAVBAR --- */
+
+.NavBarBrand {
+    display: flex;
+    align-items: center;
+}
+
+.NavBarBrand :hover {
+    color: rgba(255, 255, 255, 0.55);
+    text-decoration: none;
+}
+
+.NavBarTitle {
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.4em;
+    text-align: center;
+}
+
+.NavBarEnd {
+    justify-content: end;
+    width: 95%;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.NavBarEnd :hover {
+    color: white;
+    text-decoration: none;
+}
+
+/* --- FIN DEL NAVBAR --- */
+
+.products {
+    border-radius: 5%;
+    text-align: center;
+    margin-bottom: 10%;
+    height: 95%;
+}
+
+.products__info {
+    border-top: outset;
+}
+
+.products__img {
+    width: 80%;
+    height: 247.375px;
+    align-self: center;
+    padding: 5% 0;
+}
+
+.products__img:hover {
+    transform: scale(1.1);
+}
+
+.card-title {
+    font-weight: bolder;
+}
+
+.card-text {
+    margin: 7%;
+    text-align: justify;
+    line-height: 0;
+    font-size: 0.8rem;
+}
+
