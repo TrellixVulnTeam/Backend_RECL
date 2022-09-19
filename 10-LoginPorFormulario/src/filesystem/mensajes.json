@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "timestamp": "7/9/2022 21:26:37",
+    "autor": {
+      "email": "test2@test.com",
+      "nombre": "test2",
+      "apellido": "test2",
+      "edad": 33,
+      "alias": "test2",
+      "avatar": "https://pixabay.com/images/id-5183427/"
+    },
+    "text": "hola, como estas??"
+  },
+  {
+    "id": 2,
+    "timestamp": "7/9/2022 21:27:08",
+    "autor": {
+      "email": "test@test.com",
+      "nombre": "test",
+      "apellido": "test",
+      "edad": 30,
+      "alias": "test",
+      "avatar": "https://pixabay.com/images/id-3168830/"
+    },
+    "text": "Bien y tu?"
+  }
+]

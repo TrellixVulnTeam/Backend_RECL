@@ -64,8 +64,3 @@
     font-size: 0.8rem;
 }
 
-.login {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 5%;
-}
